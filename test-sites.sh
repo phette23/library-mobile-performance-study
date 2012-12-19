@@ -31,3 +31,8 @@ do
     ./analyze-url.sh -u $CURRENTURL -t "$CURRENTTITLE"
     i=$(( $i + 1 ))
 done
+
+# can remove yslow's json output which only holds data for the last site anyways
+if [ -f analysis.json ]
+    then rm analysis.json
+fi
