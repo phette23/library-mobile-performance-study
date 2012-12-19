@@ -5,3 +5,4 @@ pkg/
 *.csv
 *.json
 !m-libraries.json
+!alexa-top10.json
