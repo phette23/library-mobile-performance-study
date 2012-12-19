@@ -15,6 +15,7 @@
 
 if [ ! "$1" ]
     then echo "Usage: ./test-sites input.json"
+    exit
 fi
 
 # iterate over the list of sites
