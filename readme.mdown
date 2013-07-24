@@ -1,0 +1,10 @@
+# Test Library Mobile Sites for Performance Optimizations
+
+## Dependencies
+
+- Node.js - in Homebrew, `brew install node`
+- PhantomJS - in Homebrew, `brew install phantomjs`
+- [JShon](http://kmkeen.com/jshon/) - in Homebrew, `brew install jshon`
+- YSlow built for PhantomJS - on GitHub, it's included as a submodule, so
+  - `git submodule init; git submodule update`
+  - & then to `make` the PhantomJS build, run `cd yslow; make phantomjs; cd ..`
