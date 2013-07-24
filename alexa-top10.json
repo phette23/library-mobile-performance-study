@@ -3,7 +3,7 @@
 	[
 	    { "title" : "Google", "url" : "www.google.com" },
 	    { "title" : "Facebook", "url" : "m.facebook.com" },
-	    { "title" : "YouTube", "url" : "m.youtube.com" },
+	    { "title" : "YouTube", "url" : "www.youtube.com" },
 	    { "title" : "Yahoo!", "url" : "m.yahoo.com" },
 	    { "title" : "Amazon", "url" : "www.amazon.com/gp/aw/h.html" },
 	    { "title" : "Wikipedia", "url" : "en.m.wikipedia.org/wiki/Main_Page" },
