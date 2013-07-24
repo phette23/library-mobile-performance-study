@@ -1,4 +1,16 @@
-# Test Library Mobile Sites for Performance Optimizations
+# Testing Library Mobile Sites using YSlow
+
+This is a project meant to automate testing library mobile websites with the performance heuristic tool YSlow, developed by Yahoo!. It can accept a JSON file of a certain format, run YSlow on each site, and save a subset of the YSlow "grades" as rows in a CSV output file. Example usage:
+
+```sh
+./test-sites.sh alexa-top10.json
+# prints out a bunch of messages
+# saves YSlow results to a CSV, analysis.csv
+```
+
+Also included is a script to scrape the names and URLs of library mobile sites from the [M-Libraries](http://www.libsuccess.org/index.php?title=M-Libraries#Mobile_interfaces_.28and.2For_OPACS.29) entry on the Library Success wiki, which is the largest list of library mobile sites I know of. It's just client-side JavaScript, so open a console & paste the code in. Chrome's Dev Tools have a `copy` command, so to get the output into your clipboard you can do `copy( JSON.stringify( jsonoutput ) )`.
+
+Not included are the actual results of running the script, but I intend to re-run it & publish the data here alongside the code.
 
 ## Dependencies
 
@@ -7,4 +19,10 @@
 - [JShon](http://kmkeen.com/jshon/) - in Homebrew, `brew install jshon`
 - YSlow built for PhantomJS - on GitHub, it's included as a submodule, so
   - `git submodule init; git submodule update`
-  - & then to `make` the PhantomJS build, run `cd yslow; make phantomjs; cd ..`
+  - & then to `make` the PhantomJS build, run `cd yslow; make phantomjs; cd ..` from inside this project's root
+
+I assume most are readily available on Linux, too. JShon isn't in `apt` but [here are some installation instructions](http://wiki.alfresco-shell-tools.googlecode.com/git-history/8bd1a104496176b737d9f4056651a18234b4df99/InstallationGuide.wiki) I found.
+
+## More Documentation
+
+TBA. I really want this to be reusable but for now I'm just putting it out there.
