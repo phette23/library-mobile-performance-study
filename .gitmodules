@@ -1,0 +1,3 @@
+[submodule "yslow"]
+	path = yslow
+	url = https://github.com/marcelduran/yslow

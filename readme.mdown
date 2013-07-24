@@ -1,8 +1,0 @@
-# Test Library Mobile Sites for Performance Optimizations
-
-## Dependencies
-
-- Node.js - in Homebrew, `brew install node`
-- PhantomJS - in Homebrew, `brew install phantomjs`
-- YSlow - in NPM, `npm install yslow`
-- [JShon](http://kmkeen.com/jshon/) - available in Homebrew, `brew install jshon` (see also: [JSON.sh](https://github.com/dominictarr/JSON.sh))

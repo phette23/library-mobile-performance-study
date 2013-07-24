@@ -54,7 +54,7 @@ fi
 echo "Running YSlow on $TITLE, hang on a minute..."
 # see github.com/marcelduran/yslow/wiki/PhantomJS
 # these options are: info=grade, format=json
-phantomjs ./build/phantomjs/yslow.js -i grade -f json $URL > analysis.json
+phantomjs ./yslow/build/phantomjs/yslow.js -i grade -f json $URL > analysis.json
 
 ########################
 # Parse the YSlow JSON #
