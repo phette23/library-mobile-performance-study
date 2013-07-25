@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env bash
 ##############################################
 # Test a series of sites with analyze-url.sh #
 ##############################################

@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env bash
 #############################################
 # Analyze sites for performance using YSlow #
 #############################################
