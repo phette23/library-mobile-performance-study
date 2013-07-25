@@ -23,6 +23,18 @@ Not included are the actual results of running the script, but I intend to re-ru
 
 I assume most are readily available on Linux, too. JShon isn't in `apt` but [here are some installation instructions](http://wiki.alfresco-shell-tools.googlecode.com/git-history/8bd1a104496176b737d9f4056651a18234b4df99/InstallationGuide.wiki) I found.
 
-## More Documentation
+## Included Files
 
-TBA. I really want this to be reusable but for now I'm just putting it out there.
+**alexa-top10.json** - a list of the top 10 sites in the U.S. from [Alexa](http://www.alexa.com/topsites/countries/US) for comparison purposes. If a mobile site is available, I used that URL rather than the main site.
+
+**analyze-url.sh** - this script analyzes a single URL & can be run on its own. At its simplest, usage is `./analyze-url.sh $URL` while you can specific a title for the URL with `./analyze-url.sh -u $URL -t $TITLE`. It writes the output to a CSV file named analysis.csv in the project root.
+
+**m-libraries.json** - a list of mobile library websites scraped from the Library Success wiki. I manually removed some sites which were either broken or not appropriate for various reasons.
+
+**parse-m-libraries.js** - a script to scrape mobile library website URLs from the Library Success wiki.
+
+**test-sites.sh** - a script to take a JSON file, structured such as either of the two included here, & run analyze-url.sh on each site.
+
+## Results
+
+Not written yet, but they'll go right here.
