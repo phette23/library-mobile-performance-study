@@ -29,7 +29,7 @@ I assume most are readily available on Linux, too. JShon isn't in `apt` but [her
 
 **analyze-url.sh** - this script analyzes a single URL & can be run on its own. At its simplest, usage is `./analyze-url.sh $URL` while you can specify a title for the URL with `./analyze-url.sh -u $URL -t $TITLE`. It writes the output to a CSV file named analysis.csv in the project root.
 
-**m-libraries.json** - a list of mobile library websites scraped from the Library Success wiki. I manually removed some sites which were either broken or not appropriate for various reasons.
+**m-libraries.json** - a list of mobile library websites scraped from the Library Success wiki. I manually removed some sites which were either broken or not appropriate for various reasons, e.g. many links were to screenshots.
 
 **parse-m-libraries.js** - a script to scrape mobile library website URLs from the Library Success wiki.
 
