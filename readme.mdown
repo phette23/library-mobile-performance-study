@@ -39,6 +39,14 @@ I assume most are readily available on Linux, too. JShon isn't in `apt` but [her
 
 Not written yet, but they'll go right here.
 
+### Caveats
+
+- The list of library mobile sites is not comprehensive & probably very self-selecting, as only libraries aware of the Library Success wiki would bother listing their site there.
+- YSlow
+  - does not measure what really matters in performance, e.g. the user's experience of how quickly a site loads (which ≠ page load time) & reacts to interaction.
+  - does measure a number of important aspects which generally correlate with improved performance.
+  - The subset of YSlow's many metrics is fairly arbitrary, they tend to be things that I personally think are important & easy to understand/improve.
+
 ## License
 
 All original code & data collected in this repository is under the [Open Database License](http://opendatacommons.org/licenses/odbl/) by Open Data Commons.
