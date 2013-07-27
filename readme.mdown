@@ -49,6 +49,6 @@ Not written yet, but they'll go right here.
 
 ## License
 
-All original code & data collected in this repository is under the [Open Database License](http://opendatacommons.org/licenses/odbl/) by Open Data Commons.
+All original code (e.g. the shell scripts, the JavaScript to scrape the Library Success wiki) & data collected in this repository is under the [Open Database License](http://opendatacommons.org/licenses/odbl/) by Open Data Commons.
 
-Note that the software dependencies all come with their own licenses which are different from the above.
+Note that the software dependencies all come with their own licenses which are different from the above. See, for instance, the LICENSE.txt in the YSlow repository.
