@@ -38,3 +38,9 @@ I assume most are readily available on Linux, too. JShon isn't in `apt` but [her
 ## Results
 
 Not written yet, but they'll go right here.
+
+## License
+
+All original code & data collected in this repository is under the [Open Database License](http://opendatacommons.org/licenses/odbl/) by Open Data Commons.
+
+Note that the software dependencies all come with their own licenses which are different from the above.
