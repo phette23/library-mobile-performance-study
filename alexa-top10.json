@@ -3,13 +3,13 @@
 	[
 	    { "title" : "Google", "url" : "www.google.com" },
 	    { "title" : "Facebook", "url" : "m.facebook.com" },
-	    { "title" : "YouTube", "url" : "www.youtube.com" },
-	    { "title" : "Yahoo!", "url" : "m.yahoo.com" },
+	    { "title" : "YouTube", "url" : "m.youtube.com" },
+	    { "title" : "Yahoo!", "url" : "www.yahoo.com" },
 	    { "title" : "Amazon", "url" : "www.amazon.com/gp/aw/h.html" },
 	    { "title" : "Wikipedia", "url" : "en.m.wikipedia.org/wiki/Main_Page" },
 	    { "title" : "Ebay", "url" : "hp.mobileweb.ebay.com/home" },
-	    { "title" : "Twitter", "url" : "mobile.twitter.com" },
-	    { "title" : "Craig's List", "url" : "www.craigslist.org/about/sites/" },
+	    { "title" : "Twitter", "url" : "twitter.com" },
+	    { "title" : "Craig's List", "url" : "www.craigslist.org/about/sites" },
 	    { "title" : "Windows Live", "url" : "https://login.live.com/login.srf" }
 	]
 }
