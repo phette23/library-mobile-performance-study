@@ -17,7 +17,7 @@ $( '#Mobile_interfaces_\\.28and\\.2For_OPACS\\.29' )
 	output.sites.push( { title : this.innerText, url : this.href } );
     } );
 
-stringOutput = JSON.stringify( output );
+stringOutput = JSON.stringify( output, null, 2 );
 
 if ( copy && copy.propertyIsEnumerable() === false ) {
     copy( stringOutput );
