@@ -18,3 +18,7 @@ $( '#Mobile_interfaces_\\.28and\\.2For_OPACS\\.29' )
     } );
 
 stringOutput = JSON.stringify( output );
+
+if ( copy && copy.propertyIsEnumerable() === false ) {
+    copy( stringOutput );
+}
