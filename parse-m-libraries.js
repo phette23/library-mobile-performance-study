@@ -1,6 +1,9 @@
 // www.libsuccess.org/index.php?title=M-Libraries
 // object for storing site URLs & their link text
-var output = { "sites": [] };
+var output = {
+    "date collected": Date(),
+    "sites": []
+};
 
 // grab via ID
 $( '#Mobile_interfaces_\\.28and\\.2For_OPACS\\.29' )
