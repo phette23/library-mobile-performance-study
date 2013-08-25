@@ -8,7 +8,7 @@ This is a project meant to automate testing library mobile websites with the per
 # saves YSlow results to a CSV, analysis.csv
 ```
 
-Also included is a script to scrape the names and URLs of library mobile sites from the [M-Libraries](http://www.libsuccess.org/index.php?title=M-Libraries#Mobile_interfaces_.28and.2For_OPACS.29) entry on the Library Success wiki, which is the largest list of library mobile sites I know of. It's just client-side JavaScript, so open a console & paste the code in. Chrome's Dev Tools have a `copy` command, so to get the output into your clipboard you can do `copy( JSON.stringify( jsonoutput ) )`.
+Also included is a script to scrape the names and URLs of library mobile sites from the [M-Libraries](http://www.libsuccess.org/index.php?title=M-Libraries#Mobile_interfaces_.28and.2For_OPACS.29) entry on the Library Success wiki, which is the largest list of library mobile sites I know of. It's just client-side JavaScript, so open a console & paste the code in. If you're in Chrome or Safari, the formatted results JSON will be automatically copied to your clipboard.
 
 Not included are the actual results of running the script, but I intend to re-run it & publish the data here alongside the code.
 
