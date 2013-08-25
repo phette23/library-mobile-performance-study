@@ -1,6 +1,6 @@
 // www.libsuccess.org/index.php?title=M-Libraries
 // object for storing site URLs & their link text
-var jsonoutput = { "sites": [] };
+var output = { "sites": [] };
 
 // grab via ID
 $( '#Mobile_interfaces_\\.28and\\.2For_OPACS\\.29' )
@@ -14,7 +14,7 @@ $( '#Mobile_interfaces_\\.28and\\.2For_OPACS\\.29' )
     .find( 'li a' )
     // throw the hrefs & their link text in an object
     .each( function ( i, el ) {
-	jsonoutput.sites.push( { title : this.innerText, url : this.href } );
+	output.sites.push( { title : this.innerText, url : this.href } );
     } );
 
-JSON.stringify( jsonoutput );
+stringOutput = JSON.stringify( output );
