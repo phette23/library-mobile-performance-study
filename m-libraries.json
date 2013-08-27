@@ -1,265 +1,585 @@
-{ "date collected" : "Sat Nov 24 01:02:40 EST 2012",
-    "sites" : [
-    { "title" : "Aalborg Libraries, Denmark",
-	"url" : "http://www.mobib.nu/" },
-    { "title" : "American University Library",
-	"url" : "http://www.library.american.edu/mobile/" },
-    { "title" : "Auburn University Libraries",
-	"url" : "http://m.lib.auburn.edu/" },
-    { "title" : "Ball State University",
-	"url" : "http://www.bsu.edu/libraries/mobile/" },
-    { "title" : "Ball State OPAC",
-	"url" : "http://www.bsu.edu/libraries/MOPAC" },
-    { "title" : "Bayerische Staatsbibliothek, München",
-	"url" : "http://m.bsb-muenchen.de/" },
-    { "title" : "Biblioteca i Documentació Científica. Universitat Politècnica de València",
-	"url" : "http://bibmobil.upv.es/" },
-    { "title" : "Biblioteca Rector Gabriel Ferraté. Universitat Politècnica de Catalunya",
-	"url" : "http://bibliotecnica.upc.edu/BRGF/m/" },
-    { "title" : "Biblioteca Tec de Monterrey, Campus Monterrey",
-	"url" : "http://biblioteca.mty.itesm.mx/" },
-    { "title" : "Binghamton University Libraries",
-	"url" : "http://library.binghamton.edu/m/#_home" },
-    { "title" : "BI Norwegian Business School, Oslo, Norway",
-	"url" : "http://www.bi.edu/library/" },
-    { "title" : "Boise Public Library",
-	"url" : "http://www.boisepubliclibrary.org/mobile/" },
-    { "title" : "Boise State University, Albertsons Library",
-	"url" : "http://library.boisestate.edu/m" },
-    { "title" : "Boston College",
-	"url" : "http://www.bc.edu/libraries/mobile/" },
-    { "title" : "Boston University Medical Center Mobile Library",
-	"url" : "http://med-libwww.bu.edu/mobile/index.cfm" },
-    { "title" : "Boston University Pappas Law Library",
-	"url" : "http://www.bu.edu/lawlibrary/mobile/" },
-    { "title" : "Brigham Young University, Harold B. Lee Library",
-	"url" : "http://www.lib.byu.edu/m" },
-    { "title" : "Cal Poly Pomona University Library",
-	"url" : "http://www.csupomona.edu/~library/m/" },
-    { "title" : "California State University, Fullerton, Pollak Library",
-	"url" : "http://www.library.fullerton.edu/mobile" },
-    { "title" : "California State University, Monterey Bay, Library",
-	"url" : "http://library2.csumb.edu/m" },
-    { "title" : "Cambridge University Library",
-	"url" : "http://www.lib.cam.ac.uk/mob/camlib.cgi" },
-    { "title" : "Canton Public Library",
-	"url" : "http://www.cantonpl.org/" },
-    { "title" : "Cape Fear Community College Learning Resource Center",
-	"url" : "http://cfcc.edu/lrc/m/" },
-    { "title" : "T. Carney Library Mass Dartmouth Claire T. Carney Library",
-	"url" : "http://m.lib.umassd.edu/" },
-    { "title" : "Centre d'accès à l'information juridique (CAIJ)",
-	"url" : "http://m.caij.qc.ca/" },
-    { "title" : "Chesapeake College",
-	"url" : "http://www.chesapeake.edu/library/m/index.html" },
-    { "title" : "Chelmsford (MA) Public Library",
-	"url" : "http://www.chelmsfordlibrary.org/mobile/" },
-    { "title" : "Christian Brothers University, Plough Library",
-	"url" : "http://www.cbu.edu/cbu/Library/mobile/index.htm" },
-    { "title" : "College of DuPage Library",
-	"url" : "http://m.codlibrary.org/" },
-    { "title" : "Contra Costa County Library",
-	"url" : "http://ccclib.mobi/" },
-    { "title" : "Cornell University Library",
-	"url" : "http://library.cornell.edu/m" },
-    { "title" : "Crowley Ridge Regional Library System",
-	"url" : "http://m.libraryinjonesboro.org/" },
-    { "title" : "DeKalb County Public Library",
-	"url" : "http://m.dekalblibrary.org/" },
-    { "title" : "Dowling College Library",
-	"url" : "http://www.dowling.edu/library/m/index.html" },
-    { "title" : "Duke University",
-	"url" : "http://library.duke.edu/mobile/" },
-    { "title" : "Enoch Pratt Free Library",
-	"url" : "http://prattlibrary.mobi/" },
-    { "title" : "Fairfield Univerity, DiMenna-Nyselius Library",
-	"url" : "http://mlib.fairfield.edu/" },
-    { "title" : "FIU Medical Library",
-	"url" : "http://medlib.fiu.edu/m/" },
-    { "title" : "Florida International University Libraries",
-	"url" : "http://library.fiu.edu/m/" },
-    { "title" : "George Mason University Libraries",
-	"url" : "http://m.gmu.edu/" },
-    { "title" : "Georgia Health Science University, Greenblatt Library",
-	"url" : "http://lib.georgiahealth.edu/m/" },
-    { "title" : "Georgetown University Library",
-	"url" : "http://library.georgetown.edu/mobile" },
-    { "title" : "Gettysburg College",
-	"url" : "http://www.gettysburg.edu/library/m" },
-    { "title" : "Ghent University Library",
-	"url" : "http://lib.ugent.be/info/en/mobile.shtml" },
-    { "title" : "Hanover College, Duggan Library",
-	"url" : "http://library.hanover.edu/mobile/mhome.html" },
-    { "title" : "Harford County Public Library",
-	"url" : "http://m.hcplonline.info/#home" },
-    { "title" : "Harvard",
-	"url" : "http://hcl.harvard.edu/mobile/" },
-    { "title" : "Indiana University South Bend",
-	"url" : "http://m.library.iusb.edu/" },
-    { "title" : "Ithaca College Library",
-	"url" : "http://www.ithacalibrary.com/m/" },
-    { "title" : "Iowa City Public Library",
-	"url" : "http://m.icpl.org/" },
-    { "title" : "The Italian Serials Catalogue ACNP",
-	"url" : "http://mobile.cib.unibo.it/" },
-    { "title" : "London School of Economics (LSE) Library",
-	"url" : "http://www2.lse.ac.uk/library/eresources/access/mobileaccess.aspx" },
-    { "title" : "Koninklijke Bibliotheek, National Library of the Netherlands",
-	"url" : "http://www.kb.nl/" },
-    { "title" : "Massachusetts Institute of Technology",
-	"url" : "http://libraries.mit.edu/mobile-site/" },
-    { "title" : "McGill University Libraries",
-	"url" : "http://m.library.mcgill.ca/" },
-    { "title" : "MD Anderson Center Research Medical Library",
-	"url" : "http://www3.mdanderson.org/library/mobile/" },
-    { "title" : "Miami University Libraries (Ohio)",
-	"url" : "http://www.lib.muohio.edu/m/" },
-    { "title" : "Michigan Technological University Library",
-	"url" : "http://www.lib.mtu.edu/m/" },
-    { "title" : "Middle Tennessee State University Library",
-	"url" : "http://library.mtsu.edu/m/" },
-    { "title" : "Mississippi State University Libraries",
-	"url" : "http://library.msstate.edu/m/" },
-    { "title" : "Molloy College Library (New York)",
-	"url" : "http://students.molloy.edu/library1/m/index.html" },
-    { "title" : "Mount Prospect Public Library",
-	"url" : "http://mobile.mppl.org/" },
-    { "title" : "Nanyang Technological University Library",
-	"url" : "http://blogs.ntu.edu.sg/library/mobile-library/" },
-    { "title" : "National Library Board Singapore",
-	"url" : "http://m.nlb.gov.sg/" },
-    { "title" : "New York Public Library",
-	"url" : "http://m.nypl.org/" },
-    { "title" : "North Carolina State University Library",
-	"url" : "http://www.lib.ncsu.edu/m/" },
-    { "title" : "Nova Southeastern University - Alvin Sherman Library",
-	"url" : "http://www.nova.edu/library/m/" },
-    { "title" : "Onondaga County Public Library, New York",
-	"url" : "http://m.onlib.org/" },
-    { "title" : "Open University Library, United Kingdom",
-	"url" : "http://library.open.ac.uk/" },
-    { "title" : "OPLIN",
-	"url" : "http://www.oplin.org/mobile/" },
-    { "title" : "Orange County Library System (FL)",
-	"url" : "http://m.ocls.info/" },
-    { "title" : "Oregon State University Mobile Site",
-	"url" : "http://m.library.oregonstate.edu/" },
-    { "title" : "Penn State University Libraries",
-	"url" : "http://m.libraries.psu.edu/" },
-    { "title" : "Rochester Hills Public Library (Michigan)",
-	"url" : "http://www.rhpl.org/m" },
-    { "title" : "Rice University, Fondren Library, Houston, TX",
-	"url" : "http://m.library.rice.edu/" },
-    { "title" : "Ryerson Uni",
-	"url" : "https://m.ryerson.ca/core_apps/library/" },
-    { "title" : "Ryerson University Library",
-	"url" : "http://www.ryerson.ca/library/mobile/" },
-    { "title" : "Sacramento Public Library",
-	"url" : "http://www.saclibrary.org/mobile" },
-    { "title" : "Sistema de Bibliotecas DuocUC Chile",
-	"url" : "http://m.biblioteca.duoc.cl/" },
-    { "title" : "San Diego State University",
-	"url" : "http://infomobile.sdsu.edu/" },
-    { "title" : "San Francisco Public Library",
-	"url" : "http://sfpl.org/mobile.xhtml.php" },
-    { "title" : "Simmons Library",
-	"url" : "http://www.simmons.edu/library/m/" },
-    { "title" : "Sonoma State University",
-	"url" : "http://library.sonoma.edu/m" },
-    { "title" : "St. John’s University, College of St. Benedict (Clemens Library)",
-	"url" : "http://www.csbsju.edu/library/mobile/" },
-    { "title" : "Texas Christian University",
-	"url" : "http://lib.tcu.edu/m" },
-    { "title" : "Tulsa City-County Library",
-	"url" : "http://m.tulsalibrary.org/" },
-    { "title" : "UCP Marjon (University College Plymouth)",
-	"url" : "http://www.marjon.ac.uk/mobile/facilities/library/" },
-    { "title" : "University of Alberta",
-	"url" : "http://m.library.ualberta.ca/" },
-    { "title" : "University of Alberta PDA Zone",
-	"url" : "http://www.library.ualberta.ca/pdazone/" },
-    { "title" : "University of Amsterdam",
-	"url" : "http://cf.uba.uva.nl/mobiel/" },
-    { "title" : "University of Arkansas for Medical Sciences Library",
-	"url" : "http://www.library.uams.edu/m/" },
-    { "title" : "University of British Columbia Library",
-	"url" : "http://www.library.ubc.ca/m/" },
-    { "title" : "Universidad de Cádiz. Área de Biblioteca y Archivo. Enlace a la web informativa",
-	"url" : "http://bibmovil.uca.es/" },
-    { "title" : "University of California, Irvine",
-	"url" : "http://www.lib.uci.edu/mobile/" },
-    { "title" : "University of California, San Diego",
-	"url" : "http://libraries.ucsd.edu/about/press/ucsd-libraries-mobile-web-site.html" },
-    { "title" : "University of California, San Francisco",
-	"url" : "http://m.ucsf.edu/library/options" },
-    { "title" : "University of Central Oklahoma",
-	"url" : "http://library.uco.edu/m/" },
-    { "title" : "University of Denver (Penrose Library) in beta version",
-	"url" : "http://mysite.du.edu/~jokraus/test/m.html" },
-    { "title" : "University of Hawaii - Leeward Community College Library",
-	"url" : "http://www.leeward.hawaii.edu/lib/m" },
-    { "title" : "University of Illinois Library",
-	"url" : "http://m.library.illinois.edu/" },
-    { "title" : "University of Iowa Libraries",
-	"url" : "http://www.lib.uiowa.edu/m/" },
-    { "title" : "University of Lethbridge Library",
-	"url" : "http://www.uleth.ca/lib/mobile/" },
-    { "title" : "University of Massachusetts Dartmouth - Mobile Beta",
-	"url" : "http://m.lib.umassd.edu/" },
-    { "title" : "University of Michigan Library",
-	"url" : "http://m.lib.umich.edu/" },
-    { "title" : "University of Minnesota Library",
-	"url" : "http://www.lib.umn.edu/mobile/" },
-    { "title" : "University of Missouri - Columbia",
-	"url" : "http://mulibraries.missouri.edu/mobile" },
-    { "title" : "University of Montana Library",
-	"url" : "http://m.lib.umt.edu/" },
-    { "title" : "University of Navarra - Spain",
-	"url" : "http://www.unav.es/biblioteca/m/" },
-    { "title" : "University of Nebraska–Lincoln Libraries",
-	"url" : "http://unl.edu/libr/m/" },
-    { "title" : "University of Nebraska Omaha Library",
-	"url" : "http://m.library.unomaha.edu/" },
-    { "title" : "University of North Florida Library",
-	"url" : "http://www.unf.edu/library/mobile/" },
-    { "title" : "University of Pennsylvania",
-	"url" : "http://www.library.upenn.edu/m/" },
-    { "title" : "University of Pretoria, South Africa",
-	"url" : "http://www.library.up.ac.za/mobi/" },
-    { "title" : "University of Puerto Rico",
-	"url" : "http://citec.mobify.me/" },
-    { "title" : "University of North Carolina at Chapel Hill",
-	"url" : "http://www.lib.unc.edu/m" },
-    { "title" : "University of Richmond (Boatwright Memorial Library)",
-	"url" : "http://library.richmond.edu/m/#_home" },
-    { "title" : "University of Rochester Libraries Mobile",
-	"url" : "http://www.lib.rochester.edu/m" },
-    { "title" : "University of San Francisco Mobile",
-	"url" : "http://mobile.usfca.edu/mobile.html" },
-    { "title" : "University of Tennessee Health Science Center Library Mobile",
-	"url" : "http://library.uthsc.edu/mobile/" },
-    { "title" : "University of Texas Health Science Center at San Antonio Libraries Mobile",
-	"url" : "http://uthscsa.mobi/library/" },
-    { "title" : "University of Texas Southwestern Medical Center at Dallas Library Mobile",
-	"url" : "http://www.utsouthwestern.edu/librarymobile/" },
-    { "title" : "University of Toronto Libraries Mobile",
-	"url" : "http://m.utlib.ca/" },
-    { "title" : "University of Virginia Library",
-	"url" : "http://mobile.virginia.edu/library.php" },
-    { "title" : "fancier version",
-	"url" : "http://m.lib.virginia.edu/" },
-    { "title" : "Utrecht University Library",
-	"url" : "http://m.library.uu.nl/intro.php" },
-    { "title" : "Virginia Commonwealth University Libraries",
-	"url" : "http://m.library.vcu.edu/" },
-    { "title" : "Wayne State University Libraries",
-	"url" : "http://m.lib.wayne.edu/" },
-    { "title" : "West Virginia University Libraries",
-	"url" : "http://m.lib.wvu.edu/" },
-    { "title" : "Worthington Libraries",
-	"url" : "http://m.worthingtonlibraries.org/" },
-    { "title" : "Yale University's Cushing/Whitney Medical Library",
-	"url" : "http://www.med.yale.edu/library/m/" },
-    { "title" : "Yale Law",
-	"url" : "http://m-library.law.yale.edu/" }
-]}
+{
+  "date collected": "Sun Aug 25 2013 18:17:39 GMT-0400 (EDT)",
+  "sites": [
+    {
+      "title": "Aalborg Libraries, Denmark",
+      "url": "http://www.mobib.nu/"
+    },
+    {
+      "title": "American University Library",
+      "url": "http://www.library.american.edu/mobile/"
+    },
+    {
+      "title": "Auburn University Libraries",
+      "url": "http://m.lib.auburn.edu/"
+    },
+    {
+      "title": "Ball State University",
+      "url": "http://www.bsu.edu/libraries/mobile/"
+    },
+    {
+      "title": "OPAC",
+      "url": "http://www.bsu.edu/libraries/MOPAC"
+    },
+    {
+      "title": "screenshots",
+      "url": "http://userslib.com/2008/09/03/mobile-library-catalogs"
+    },
+    {
+      "title": "Bayerische Staatsbibliothek, München",
+      "url": "http://m.bsb-muenchen.de/"
+    },
+    {
+      "title": "Biblioteca i Documentació Científica. Universitat Politècnica de València",
+      "url": "http://bibmobil.upv.es/"
+    },
+    {
+      "title": "Biblioteca Rector Gabriel Ferraté. Universitat Politècnica de Catalunya",
+      "url": "http://bibliotecnica.upc.edu/BRGF/m/"
+    },
+    {
+      "title": "Biblioteca Tec de Monterrey, Campus Monterrey",
+      "url": "http://biblioteca.mty.itesm.mx/"
+    },
+    {
+      "title": "Responsive Web Design",
+      "url": "http://www.alistapart.com/articles/responsive-web-design/"
+    },
+    {
+      "title": "Binghamton University Libraries",
+      "url": "http://library.binghamton.edu/m/#_home"
+    },
+    {
+      "title": "BI Norwegian Business School, Oslo, Norway",
+      "url": "http://www.bi.edu/library/"
+    },
+    {
+      "title": "Responsive Web Design",
+      "url": "http://www.alistapart.com/articles/responsive-web-design/"
+    },
+    {
+      "title": "Boise Public Library",
+      "url": "http://www.boisepubliclibrary.org/mobile/"
+    },
+    {
+      "title": "Boise State University, Albertsons Library",
+      "url": "http://library.boisestate.edu/m"
+    },
+    {
+      "title": "Boston College",
+      "url": "http://www.bc.edu/libraries/mobile/"
+    },
+    {
+      "title": "Boston University Medical Center Mobile Library",
+      "url": "http://med-libwww.bu.edu/mobile/index.cfm"
+    },
+    {
+      "title": "Boston University Pappas Law Library",
+      "url": "http://www.bu.edu/lawlibrary/mobile/"
+    },
+    {
+      "title": "Brigham Young University, Harold B. Lee Library",
+      "url": "http://www.lib.byu.edu/m"
+    },
+    {
+      "title": "Cal Poly Pomona University Library",
+      "url": "http://www.csupomona.edu/~library/m/"
+    },
+    {
+      "title": "California State University, Fullerton, Pollak Library",
+      "url": "http://www.library.fullerton.edu/mobile"
+    },
+    {
+      "title": "California State University, Monterey Bay, Library",
+      "url": "http://library2.csumb.edu/m"
+    },
+    {
+      "title": "Cambridge University Library",
+      "url": "http://www.lib.cam.ac.uk/mob/camlib.cgi"
+    },
+    {
+      "title": "Canton Public Library",
+      "url": "http://www.cantonpl.org/"
+    },
+    {
+      "title": "Responsive Web Design",
+      "url": "http://www.alistapart.com/articles/responsive-web-design/"
+    },
+    {
+      "title": "Cape Fear Community College Learning Resource Center",
+      "url": "http://cfcc.edu/lrc/m/"
+    },
+    {
+      "title": "T. Carney Library Mass Dartmouth Claire T. Carney Library",
+      "url": "http://m.lib.umassd.edu/"
+    },
+    {
+      "title": "Centre d'accès à l'information juridique (CAIJ)",
+      "url": "http://m.caij.qc.ca/"
+    },
+    {
+      "title": "Chesapeake College",
+      "url": "http://www.chesapeake.edu/library/m/index.html"
+    },
+    {
+      "title": "Chelmsford (MA) Public Library",
+      "url": "http://www.chelmsfordlibrary.org/mobile/"
+    },
+    {
+      "title": "Christian Brothers University, Plough Library",
+      "url": "http://www.cbu.edu/cbu/Library/mobile/index.htm"
+    },
+    {
+      "title": "College of DuPage Library",
+      "url": "http://m.codlibrary.org/"
+    },
+    {
+      "title": "Contra Costa County Library",
+      "url": "http://ccclib.mobi/"
+    },
+    {
+      "title": "Cornell University Library",
+      "url": "http://library.cornell.edu/m"
+    },
+    {
+      "title": "Crowley Ridge Regional Library System",
+      "url": "http://m.libraryinjonesboro.org/"
+    },
+    {
+      "title": "DeKalb County Public Library",
+      "url": "http://m.dekalblibrary.org/"
+    },
+    {
+      "title": "Dowling College Library",
+      "url": "http://www.dowling.edu/library/m/index.html"
+    },
+    {
+      "title": "Duke University",
+      "url": "http://library.duke.edu/mobile/"
+    },
+    {
+      "title": "Enoch Pratt Free Library",
+      "url": "http://prattlibrary.mobi/"
+    },
+    {
+      "title": "ETH-Bibliothek Zürich",
+      "url": "http://www.library.ethz.ch/mobile"
+    },
+    {
+      "title": "Fairfield Univerity, DiMenna-Nyselius Library",
+      "url": "http://mlib.fairfield.edu/"
+    },
+    {
+      "title": "FIU Medical Library",
+      "url": "http://medlib.fiu.edu/m/"
+    },
+    {
+      "title": "Florida International University Libraries",
+      "url": "http://library.fiu.edu/m/"
+    },
+    {
+      "title": "George Mason University Libraries",
+      "url": "http://m.gmu.edu/"
+    },
+    {
+      "title": "Georgia Health Science University, Greenblatt Library",
+      "url": "http://lib.georgiahealth.edu/m/"
+    },
+    {
+      "title": "Georgetown University Library",
+      "url": "http://library.georgetown.edu/mobile"
+    },
+    {
+      "title": "Gettysburg College",
+      "url": "http://www.gettysburg.edu/library/m"
+    },
+    {
+      "title": "Ghent University Library",
+      "url": "http://lib.ugent.be/info/en/mobile.shtml"
+    },
+    {
+      "title": "Hanover College, Duggan Library",
+      "url": "http://library.hanover.edu/mobile/mhome.html"
+    },
+    {
+      "title": "Harford County Public Library",
+      "url": "http://m.hcplonline.info/#home"
+    },
+    {
+      "title": "Harvard",
+      "url": "http://hcl.harvard.edu/mobile/"
+    },
+    {
+      "title": "Indiana University South Bend",
+      "url": "http://m.library.iusb.edu/"
+    },
+    {
+      "title": "Ithaca College Library",
+      "url": "http://www.ithacalibrary.com/m/"
+    },
+    {
+      "title": "Iowa City Public Library",
+      "url": "http://m.icpl.org/"
+    },
+    {
+      "title": "The Italian Serials Catalogue ACNP",
+      "url": "http://mobile.cib.unibo.it/"
+    },
+    {
+      "title": "London School of Economics (LSE) Library",
+      "url": "http://www2.lse.ac.uk/library/eresources/access/mobileaccess.aspx"
+    },
+    {
+      "title": "university app",
+      "url": "http://itunes.apple.com/gb/app/id366637697?mt=8&uo=6"
+    },
+    {
+      "title": "Koninklijke Bibliotheek, National Library of the Netherlands",
+      "url": "http://www.kb.nl/"
+    },
+    {
+      "title": "Massachusetts Institute of Technology",
+      "url": "http://libraries.mit.edu/mobile-site/"
+    },
+    {
+      "title": "McGill University Libraries",
+      "url": "http://m.library.mcgill.ca/"
+    },
+    {
+      "title": "MD Anderson Center Research Medical Library",
+      "url": "http://www3.mdanderson.org/library/mobile/"
+    },
+    {
+      "title": "Miami University Libraries (Ohio)",
+      "url": "http://www.lib.muohio.edu/m/"
+    },
+    {
+      "title": "Michigan Technological University Library",
+      "url": "http://www.lib.mtu.edu/m/"
+    },
+    {
+      "title": "Middle Tennessee State University Library",
+      "url": "http://library.mtsu.edu/m/"
+    },
+    {
+      "title": "Mississippi State University Libraries",
+      "url": "http://library.msstate.edu/m/"
+    },
+    {
+      "title": "Molloy College Library (New York)",
+      "url": "http://students.molloy.edu/library1/m/index.html"
+    },
+    {
+      "title": "Mount Prospect Public Library",
+      "url": "http://mobile.mppl.org/"
+    },
+    {
+      "title": "Nanyang Technological University Library",
+      "url": "http://blogs.ntu.edu.sg/library/mobile-library/"
+    },
+    {
+      "title": "National Library Board Singapore",
+      "url": "http://m.nlb.gov.sg/"
+    },
+    {
+      "title": "New York Public Library",
+      "url": "http://m.nypl.org/"
+    },
+    {
+      "title": "screenshots",
+      "url": "http://userslib.com/2009/01/23/2-new-mobile-library-interfaces/"
+    },
+    {
+      "title": "North Carolina State University Library",
+      "url": "http://www.lib.ncsu.edu/m/"
+    },
+    {
+      "title": "screenshots",
+      "url": "http://userslib.com/2008/09/03/mobile-library-catalogs"
+    },
+    {
+      "title": "Nova Southeastern University - Alvin Sherman Library",
+      "url": "http://www.nova.edu/library/m/"
+    },
+    {
+      "title": "Onondaga County Public Library, New York",
+      "url": "http://m.onlib.org/"
+    },
+    {
+      "title": "Open University Library, United Kingdom",
+      "url": "http://library.open.ac.uk/"
+    },
+    {
+      "title": "OPLIN",
+      "url": "http://www.oplin.org/mobile/"
+    },
+    {
+      "title": "Orange County Library System (FL)",
+      "url": "http://m.ocls.info/"
+    },
+    {
+      "title": "Oregon State University Mobile Site",
+      "url": "http://m.library.oregonstate.edu/"
+    },
+    {
+      "title": "Penn State University Libraries",
+      "url": "http://m.libraries.psu.edu/"
+    },
+    {
+      "title": "Rochester Hills Public Library (Michigan)",
+      "url": "http://www.rhpl.org/m"
+    },
+    {
+      "title": "Rice University, Fondren Library, Houston, TX",
+      "url": "http://m.library.rice.edu/"
+    },
+    {
+      "title": "Ryerson Uni",
+      "url": "https://m.ryerson.ca/core_apps/library/"
+    },
+    {
+      "title": "Ryerson University Library",
+      "url": "http://www.ryerson.ca/library/mobile/"
+    },
+    {
+      "title": "Sacramento Public Library",
+      "url": "http://www.saclibrary.org/mobile"
+    },
+    {
+      "title": "Sistema de Bibliotecas DuocUC Chile",
+      "url": "http://m.biblioteca.duoc.cl/"
+    },
+    {
+      "title": "San Diego State University",
+      "url": "http://infomobile.sdsu.edu/"
+    },
+    {
+      "title": "San Francisco Public Library",
+      "url": "http://sfpl.org/mobile.xhtml.php"
+    },
+    {
+      "title": "Simmons Library",
+      "url": "http://www.simmons.edu/library/m/"
+    },
+    {
+      "title": "Sonoma State University",
+      "url": "http://library.sonoma.edu/m"
+    },
+    {
+      "title": "St. John’s University, College of St. Benedict (Clemens Library)",
+      "url": "http://www.csbsju.edu/library/mobile/"
+    },
+    {
+      "title": "Texas Christian University",
+      "url": "http://lib.tcu.edu/m"
+    },
+    {
+      "title": "Tulsa City-County Library",
+      "url": "http://m.tulsalibrary.org/"
+    },
+    {
+      "title": "UCP Marjon (University College Plymouth)",
+      "url": "http://www.marjon.ac.uk/mobile/facilities/library/"
+    },
+    {
+      "title": "University of Alberta",
+      "url": "http://m.library.ualberta.ca/"
+    },
+    {
+      "title": "University of Alberta PDA Zone",
+      "url": "http://www.library.ualberta.ca/pdazone/"
+    },
+    {
+      "title": "University of Amsterdam",
+      "url": "http://cf.uba.uva.nl/mobiel/"
+    },
+    {
+      "title": "University of Arkansas for Medical Sciences Library",
+      "url": "http://www.library.uams.edu/m/"
+    },
+    {
+      "title": "University of Baltimore, Langsdale Library",
+      "url": "http://langsdale.ubalt.edu/m/"
+    },
+    {
+      "title": "University of British Columbia Library",
+      "url": "http://www.library.ubc.ca/m/"
+    },
+    {
+      "title": "Universidad de Cádiz. Área de Biblioteca y Archivo. Enlace a la web informativa",
+      "url": "http://bibmovil.uca.es/"
+    },
+    {
+      "title": "University of California, Irvine",
+      "url": "http://www.lib.uci.edu/mobile/"
+    },
+    {
+      "title": "University of California, San Diego",
+      "url": "http://libraries.ucsd.edu/about/press/ucsd-libraries-mobile-web-site.html"
+    },
+    {
+      "title": "University of California, San Francisco",
+      "url": "http://m.ucsf.edu/library/options"
+    },
+    {
+      "title": "University of Central Oklahoma",
+      "url": "http://library.uco.edu/m/"
+    },
+    {
+      "title": "University of Denver (Penrose Library) in beta version",
+      "url": "http://mysite.du.edu/~jokraus/test/m.html"
+    },
+    {
+      "title": "University of Hawaii - Leeward Community College Library",
+      "url": "http://www.leeward.hawaii.edu/lib/m"
+    },
+    {
+      "title": "University of Illinois Library",
+      "url": "http://m.library.illinois.edu/"
+    },
+    {
+      "title": "University of Iowa Libraries",
+      "url": "http://www.lib.uiowa.edu/m/"
+    },
+    {
+      "title": "University of Lethbridge Library",
+      "url": "http://www.uleth.ca/lib/mobile/"
+    },
+    {
+      "title": "University of Massachusetts Dartmouth - Mobile Beta",
+      "url": "http://m.lib.umassd.edu/"
+    },
+    {
+      "title": "University of Michigan Library",
+      "url": "http://m.lib.umich.edu/"
+    },
+    {
+      "title": "University of Minnesota Library",
+      "url": "http://www.lib.umn.edu/mobile/"
+    },
+    {
+      "title": "University of Missouri - Columbia",
+      "url": "http://mulibraries.missouri.edu/mobile"
+    },
+    {
+      "title": "University of Montana Library",
+      "url": "http://m.lib.umt.edu/"
+    },
+    {
+      "title": "University of Navarra - Spain",
+      "url": "http://www.unav.es/biblioteca/m/"
+    },
+    {
+      "title": "University of Nebraska–Lincoln Libraries",
+      "url": "http://unl.edu/libr/m/"
+    },
+    {
+      "title": "University of Nebraska Omaha Library",
+      "url": "http://m.library.unomaha.edu/"
+    },
+    {
+      "title": "University of North Florida Library",
+      "url": "http://www.unf.edu/library/mobile/"
+    },
+    {
+      "title": "University of Pennsylvania",
+      "url": "http://www.library.upenn.edu/m/"
+    },
+    {
+      "title": "University of Pretoria, South Africa",
+      "url": "http://www.library.up.ac.za/mobi/"
+    },
+    {
+      "title": "University of Puerto Rico",
+      "url": "http://citec.mobify.me/"
+    },
+    {
+      "title": "University of North Carolina at Chapel Hill",
+      "url": "http://www.lib.unc.edu/m"
+    },
+    {
+      "title": "University of Richmond Libraries",
+      "url": "http://oncampus.richmond.edu/academics/library/mobile/"
+    },
+    {
+      "title": "OPAC",
+      "url": "http://www.google.com/gwt/n?u=http%3A%2F%2Foncampus.richmond.edu%2Facademics%2Flibary%2Fmobile%2Flibmobilecat.htm&_gwt_noimg=1"
+    },
+    {
+      "title": "screenshots",
+      "url": "http://userslib.com/2008/09/03/mobile-library-catalogs"
+    },
+    {
+      "title": "University of Richmond (Boatwright Memorial Library)",
+      "url": "http://library.richmond.edu/m/#_home"
+    },
+    {
+      "title": "University of Rochester Libraries Mobile",
+      "url": "http://www.lib.rochester.edu/m"
+    },
+    {
+      "title": "University of San Francisco Mobile",
+      "url": "http://mobile.usfca.edu/mobile.html"
+    },
+    {
+      "title": "University of Tennessee Health Science Center Library Mobile",
+      "url": "http://library.uthsc.edu/mobile/"
+    },
+    {
+      "title": "University of Texas Health Science Center at San Antonio Libraries Mobile",
+      "url": "http://uthscsa.mobi/library/"
+    },
+    {
+      "title": "University of Texas Southwestern Medical Center at Dallas Library Mobile",
+      "url": "http://www.utsouthwestern.edu/librarymobile/"
+    },
+    {
+      "title": "University of Toronto Libraries Mobile",
+      "url": "http://m.utlib.ca/"
+    },
+    {
+      "title": "University of Virginia Library",
+      "url": "http://mobile.virginia.edu/library.php"
+    },
+    {
+      "title": "fancier version",
+      "url": "http://m.lib.virginia.edu/"
+    },
+    {
+      "title": "screenshots",
+      "url": "http://userslib.com/2008/09/03/mobile-library-catalogs"
+    },
+    {
+      "title": "background info",
+      "url": "http://www2.lib.virginia.edu/mobile/"
+    },
+    {
+      "title": "Utrecht University Library",
+      "url": "http://m.library.uu.nl/intro.php"
+    },
+    {
+      "title": "Virginia Commonwealth University Libraries",
+      "url": "http://m.library.vcu.edu/"
+    },
+    {
+      "title": "Wayne State University Libraries",
+      "url": "http://m.lib.wayne.edu/"
+    },
+    {
+      "title": "West Virginia University Libraries",
+      "url": "http://m.lib.wvu.edu/"
+    },
+    {
+      "title": "Worthington Libraries",
+      "url": "http://m.worthingtonlibraries.org/"
+    },
+    {
+      "title": "Yale University's Cushing/Whitney Medical Library",
+      "url": "http://www.med.yale.edu/library/m/"
+    },
+    {
+      "title": "Yale Law",
+      "url": "http://m-library.law.yale.edu/"
+    }
+  ]
+}
