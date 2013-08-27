@@ -26,35 +26,52 @@
       </header>
 
       <section>
-        <h3>
-          <a name="introduction" class="anchor" href="#welcome-to-github-pages"></a>Introduction
-        </h3>
+<h3>
+<a name="introduction" class="anchor" href="#welcome-to-github-pages"></a>Introduction
+</h3>
 
-        <p>I'll introduce things here, yeah.</p>
+<p>I'll introduce things here, yeah.</p>
 
-        <h3>
-          <a name="introduction" class="anchor" href="#welcome-to-github-pages"></a>Methodology
-        </h3>
+<h3>
+<a name="introduction" class="anchor" href="#welcome-to-github-pages"></a>Methodology
+</h3>
 
-        <p>How it works, how to recreate/rerun.</p>
+<p>Outline:
+  [ ] scrape M-libraries
+  [ ] manually remove misleading links (e.g. screenshots)
+  [ ] determine Alexa Top 10
+  [x] look up mobile sites for top 10
+  [ ] run tests
+  [ ] look at statistics on the results.
+</p>
 
-        <h3>
-          <a name="introduction" class="anchor" href="#welcome-to-github-pages"></a>Limitations
-        </h3>
+<p>Alexa doesn't list the top sites specifically for mobile devices, so to determine which of the top ten sites have separate mobile sites I spoofed an iPhone using <code>curl</code> by running the following:</p>
 
-        <p>Copy over limitations from readme.</p>
+<pre><code>
+curl -LIA "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0_1 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A523 Safari/8536.25" $URL
+</code></pre>
 
-        <h3>
-          <a name="introduction" class="anchor" href="#welcome-to-github-pages"></a>Results
-        </h3>
+<p>where <code>$URL</code> is the desktop URL listed in Alexa. For the top ten sites, half used the same URL while half redirected to a mobile-specific location, e.g. <pre>m.facebook.com</pre>.</p>
 
-        <p>Results, complete with graphs.</p>
+<p>Already, this introduces slight inaccuracies in a performance analysis because how a user ends up on a mobile page already affects their experience. While the way my tests are run assume users start on their destination URL, that's not necessarily true. At their worst, some of the Alexa sites perform multiple redirects before landing on the mobile URL. Library sites, too, might require redirect before users get the experience optimized for their device. On the whole, while redirects should only account for a couple HTTP requests at most (and ideally only the first time a user accesses your site on a device), they're still to be avoided and can cause a noticeable page load delay. [ref: Souders first book]</p>
 
-        <h3>
-          <a name="introduction" class="anchor" href="#welcome-to-github-pages"></a>References
-        </h3>
+<h3>
+<a name="introduction" class="anchor" href="#welcome-to-github-pages"></a>Limitations
+</h3>
 
-        <p>If I referenced anything, it'll go here.</p>
+<p>Copy over limitations from readme.</p>
+
+<h3>
+<a name="introduction" class="anchor" href="#welcome-to-github-pages"></a>Results
+</h3>
+
+<p>Results, complete with graphs.</p>
+
+<h3>
+<a name="introduction" class="anchor" href="#welcome-to-github-pages"></a>References
+</h3>
+
+<p>If I referenced anything, it'll go here.</p>
 
       </section>
 
