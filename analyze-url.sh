@@ -53,8 +53,8 @@ fi
 
 echo "Running YSlow on $TITLE, hang on a minute..."
 # see github.com/marcelduran/yslow/wiki/PhantomJS
-# these options are: info=grade, format=json
-phantomjs ./yslow/build/phantomjs/yslow.js -i grade -f json $URL > analysis.json
+# these options are: info=grade, format=json, user-agent=iPhone 6
+phantomjs ./yslow/build/phantomjs/yslow.js -i grade -f json -u "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0_1 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A523 Safari/8536.25" $URL > analysis.json
 
 ########################
 # Parse the YSlow JSON #
