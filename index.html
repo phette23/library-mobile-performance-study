@@ -47,11 +47,10 @@
 
 <p>Alexa doesn't list the top sites specifically for mobile devices, so to determine which of the top ten sites have separate mobile sites I spoofed an iPhone using <code>curl</code> by running the following:</p>
 
-<pre><code>
-curl -LIA "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0_1 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A523 Safari/8536.25" $URL
+<pre><code>curl -LIA "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0_1 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A523 Safari/8536.25" $URL
 </code></pre>
 
-<p>where <code>$URL</code> is the desktop URL listed in Alexa. For the top ten sites, half used the same URL while half redirected to a mobile-specific location, e.g. <pre>m.facebook.com</pre>.</p>
+<p>where <code>$URL</code> is the desktop URL listed in Alexa. For the top ten sites, half used the same URL while half redirected to a mobile-specific location, e.g. m.facebook.com.</p>
 
 <p>Already, this introduces slight inaccuracies in a performance analysis because how a user ends up on a mobile page already affects their experience. While the way my tests are run assume users start on their destination URL, that's not necessarily true. At their worst, some of the Alexa sites perform multiple redirects before landing on the mobile URL. Library sites, too, might require redirect before users get the experience optimized for their device. On the whole, while redirects should only account for a couple HTTP requests at most (and ideally only the first time a user accesses your site on a device), they're still to be avoided and can cause a noticeable page load delay. [ref: Souders first book]</p>
 
@@ -59,14 +58,18 @@ curl -LIA "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0_1 like Mac OS X) AppleWebKit/5
 <a name="limitations" class="anchor" href="#limitations"></a>Limitations
 </h3>
 
-- The list of library mobile sites is not comprehensive & probably very self-selecting, as only libraries aware of the Library Success wiki would bother listing their site there.
-- Furthermore, there's no gaurantee that sites listed are current; URLs may have changed or the institution's may have changed strategies, using a single responsive design for instance.
-- Since only the URLs listed in the wiki were tested, this doesn't perform a comprehensive test of any institution's mobile presence. While some places listed a couple URLs, often a home page and a catalog, my method doesn't crawl an entire site while testing each page.
-- YSlow
-  - does not measure what really matters in performance, e.g. the user's experience of how quickly a site loads (which ≠ page load time) & reacts to interaction.
-  - does measure a number of important aspects which generally correlate with improved performance.
-  - The subset of YSlow's many metrics is fairly arbitrary, they tend to be things that I personally think are important & easy to understand/improve.
-  - The "JS Bottom Grade" proved to be flawed as it returned 100% for every single URL tested. I can manually observe that no every site puts their JavaScript at the bottom, so this must be a YSlow bug.
+<ul>
+<li>The list of library mobile sites is not comprehensive & probably very self-selecting, as only libraries aware of the Library Success wiki would bother listing their site there.
+<li>Furthermore, there's no gaurantee that sites listed are current; URLs may have changed or the institution's may have changed strategies, using a single responsive design for instance.
+<li>Since only the URLs listed in the wiki were tested, this doesn't perform a comprehensive test of any institution's mobile presence. While some places listed a couple URLs, often a home page and a catalog, my method doesn't crawl an entire site while testing each page.
+<li>YSlow
+  <ul>
+  <li>does not measure what really matters in performance, e.g. the user's experience of how quickly a site loads (which ≠ page load time) & reacts to interaction.
+  <li>does measure a number of important aspects which generally correlate with improved performance.
+  <li>The subset of YSlow's many metrics is fairly arbitrary, they tend to be things that I personally think are important & easy to understand/improve.
+  <li>The "JS Bottom Grade" proved to be flawed as it returned 100% for every single URL tested. I can manually observe that no every site puts their JavaScript at the bottom, so this must be a YSlow bug.
+  </ul>
+</ul>
 
 <h3>
 <a name="results" class="anchor" href="#results"></a>Results
