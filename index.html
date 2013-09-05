@@ -41,7 +41,7 @@
   [x] manually remove misleading links (e.g. screenshots)<br>
   [x] determine Alexa Top 10<br>
   [x] look up mobile sites for top 10<br>
-  [ ] run tests<br>
+  [x] run tests<br>
   [ ] look at statistics on the results.
 </p>
 
@@ -58,13 +58,25 @@
 
 <p>Already, this introduces slight inaccuracies in a performance analysis because how a user ends up on a mobile page already affects their experience. While the way my tests are run assume users start on their destination URL, that's not necessarily true. At their worst, some of the Alexa sites perform multiple redirects before landing on the mobile URL. Library sites, too, might require redirect before users get the experience optimized for their device. On the whole, while redirects should only account for a couple HTTP requests at most (and ideally only the first time a user accesses your site on a device), they're still to be avoided and can cause a noticeable page load delay. [ref: Souders first book]</p>
 
+<p>Once I had a list of both mobile library websites and mobile versions of the Alexa top 10, I ran heuristic performance tests using Yahoo!'s YSlow. To run the tests programmatically on hundreds of URLs, I used <a href="http://phantomjs.org/">PhantomJS</a> which runs a headless WebKit browser. To work around any user-agent sniffing sites were doing (e.g. redirecting desktop browsers to a desktop site), I set PhantomJS's user agent string to an iPhone 6. Since tests are heuristic and essentially check to see if a site meets a particular guideline, it doesn't matter that they're run in WebKit as opposed to another rendering engine whose real performance may differ.</p>
+
+<p>The specific YSlow tests recorded were:</p>
+<ul>
+  <li>Overall grade</li>
+  <li>Number of requests</li>
+  <li>Number of requests grade</li>
+  <li>Compression grade</li>
+  <li>JavaScript at the bottom grade <sup><a href="fn1" id="note1">[1]</a></sup></li>
+  <li></li>
+</ul>
+
 <h3>
 <a name="limitations" class="anchor" href="#limitations"></a>Limitations
 </h3>
 
 <ul>
 <li>The list of library mobile sites is not comprehensive & probably very self-selecting, as only libraries aware of the Library Success wiki would bother listing their site there.
-<li>Furthermore, there's no gaurantee that sites listed are current; URLs may have changed or the institution's may have changed strategies, using a single responsive design for instance.
+<li>Furthermore, there's no guarantee that sites listed are current; URLs may have changed or the institution's may have changed strategies, using a single responsive design for instance.
 <li>Since only the URLs listed in the wiki were tested, this doesn't perform a comprehensive test of any institution's mobile presence. While some places listed a couple URLs, often a home page and a catalog, my method doesn't crawl an entire site while testing each page.
 <li>YSlow
   <ul>
@@ -84,6 +96,10 @@
 <h3>
 <a name="references" class="anchor" href="#references"></a>References
 </h3>
+
+<ol>
+  <li><a href="note1" id="#fn1">^</a> This was later discarded because all tests returned 100%, even sites which clearly did not place all their JavaScript at the bottom when manually inspected.</li>
+</ol>
 
 <p>If I referenced anything, it'll go here.</p>
 
