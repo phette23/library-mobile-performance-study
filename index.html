@@ -30,20 +30,15 @@
 <a name="introduction" class="anchor" href="#introduction"></a>Introduction
 </h3>
 
-<p>I'll introduce things here, yeah.</p>
+<p>While many libraries now offer versions of their sites optimized for mobile devices and smaller screens, I wanted to investigate if these sites generally meet user expectations in terms of performance or page load time. While libraries may not have the resources of large web companies like Google and Facebook, those sites still determine user expectations for libraries. Commonly visited sites establish a norm and library sites which load slowly are likely to be perceived as broken or poorly designed.</p>
+
+<p>Web performance is particularly important when considering mobile devices, which have smaller cache sizes, less computing power, and sometimes utilize slower connections such as 3G.</p>
+
+<!-- TODO: references -->
 
 <h3>
 <a name="methodology" class="anchor" href="#methodology"></a>Methodology
 </h3>
-
-<p>Outline:<br>
-  [x] scrape M-libraries<br>
-  [x] manually remove misleading links (e.g. screenshots)<br>
-  [x] determine Alexa Top 10<br>
-  [x] look up mobile sites for top 10<br>
-  [x] run tests<br>
-  [ ] look at statistics on the results.
-</p>
 
 <p>To obtain a large sample of library mobile websites, I scraped URLs from <a href="http://www.libsuccess.org/index.php?title=M-Libraries">the M-Libraries page</a> of the Library Success wiki. The script which harvests URLs <a href="https://github.com/phette23/library-mobile-performance-study/blob/master/parse-m-libraries.js">is included in the git repository</a>. It takes the hrefs of all anchors elements in the <q>Mobile interfaces (and/or <abbr title="Online Public Access Catalog">OPACS</abbr>)</q> section, which includes several links to screenshots and other miscellany that I manually removed.</p>
 
@@ -70,21 +65,24 @@
   <li></li>
 </ul>
 
+<!-- TODO: fill in statistical analysis -->
+
 <h3>
 <a name="limitations" class="anchor" href="#limitations"></a>Limitations
 </h3>
 
 <ul>
-<li>The list of library mobile sites is not comprehensive & probably very self-selecting, as only libraries aware of the Library Success wiki would bother listing their site there.
-<li>Furthermore, there's no guarantee that sites listed are current; URLs may have changed or the institution's may have changed strategies, using a single responsive design for instance.
-<li>Since only the URLs listed in the wiki were tested, this doesn't perform a comprehensive test of any institution's mobile presence. While some places listed a couple URLs, often a home page and a catalog, my method doesn't crawl an entire site while testing each page.
-<li>YSlow
-  <ul>
-  <li>does not measure what really matters in performance, e.g. the user's experience of how quickly a site loads (which ≠ page load time) & reacts to interaction.
-  <li>does measure a number of important aspects which generally correlate with improved performance.
-  <li>The subset of YSlow's many metrics is fairly arbitrary, they tend to be things that I personally think are important & easy to understand/improve.
-  <li>The "JS Bottom Grade" proved to be flawed as it returned 100% for every single URL tested. I can manually observe that no every site puts their JavaScript at the bottom, so this must be a YSlow bug.
-  </ul>
+  <li>The list of library mobile sites is not comprehensive & probably very self-selecting, as only libraries aware of the Library Success wiki would bother listing their site there.
+  <li>Furthermore, there's no guarantee that sites listed are current; URLs may have changed or the institution's may have changed strategies, using a single responsive design for instance.
+  <li>Since only the URLs listed in the wiki were tested, this doesn't perform a comprehensive test of any institution's mobile presence. While some places listed a couple URLs, often a home page and a catalog, my method doesn't crawl an entire site while testing each page.
+  <li>YSlow
+    <ul>
+    <li>does not measure what really matters in performance, e.g. the user's experience of how quickly a site loads (which ≠ page load time) & reacts to interaction.
+    <li>does measure a number of important aspects which generally correlate with improved performance.
+    <li>The subset of YSlow's many metrics is fairly arbitrary, they tend to be things that I personally think are important & easy to understand/improve.
+    <li>The "JS Bottom Grade" proved to be flawed as it returned 100% for every single URL tested. I can manually observe that no every site puts their JavaScript at the bottom, so this must be a YSlow bug.
+    </ul>
+  <li>Responsive design problematizes this study's whole premise. Responsive sites aren't likely to be listed on the Library Success wiki. If a similar sample of self-identified responsive sites of libraries could be obtained, it would be interesting to compare their performance against both library mobile sites and popular sites like the Alexa top 10.</li>
 </ul>
 
 <h3>
