@@ -39,13 +39,15 @@
 <p>Outline:<br>
   [x] scrape M-libraries<br>
   [x] manually remove misleading links (e.g. screenshots)<br>
-  [ ] determine Alexa Top 10<br>
+  [x] determine Alexa Top 10<br>
   [x] look up mobile sites for top 10<br>
   [ ] run tests<br>
   [ ] look at statistics on the results.
 </p>
 
 <p>To obtain a large sample of library mobile websites, I scraped URLs from <a href="http://www.libsuccess.org/index.php?title=M-Libraries">the M-Libraries page</a> of the Library Success wiki. The script which harvests URLs <a href="https://github.com/phette23/library-mobile-performance-study/blob/master/parse-m-libraries.js">is included in the git repository</a>. It takes the hrefs of all anchors elements in the <q>Mobile interfaces (and/or <abbr title="Online Public Access Catalog">OPACS</abbr>)</q> section, which includes several links to screenshots and other miscellany that I manually removed.</p>
+
+<p>To compare library sites against a common metric that most people would be familiar with, I chose to look up the top ten most-visited websites in the United States <a href="http://www.alexa.com/topsites/countries/US">using Alexa</a>. There are certainly only services which claim to know the top websites, and taking a global view would have resulting in a different set, too.</p>
 
 <p>Alexa doesn't list the top sites specifically for mobile devices, so to determine which of the top ten sites have separate mobile sites I spoofed an iPhone using <code>curl</code> by running the following:</p>
 
