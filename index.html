@@ -32,7 +32,7 @@
 
 <p>While many libraries now offer versions of their sites optimized for mobile devices and smaller screens, I wanted to investigate if these sites generally meet user expectations in terms of performance or page load time. While libraries may not have the resources of large web companies like Google and Facebook, those sites still determine user expectations for libraries. Commonly visited sites establish a norm and library sites which load slowly are likely to be perceived as broken or poorly designed.</p>
 
-<p>Web performance is particularly important when considering mobile devices, which have smaller cache sizes, less computing power, and sometimes utilize slower connections such as 3G.</p>
+<p>Web performance is particularly important when considering mobile devices, which have smaller cache sizes, less computing power, and sometimes utilize slower connections such as 3G. <sup><a href="#fn1" id="note2">[1]</a></sup> Furthermore, a study from Compuware actually indicates that users expect sites to load <em>quicker</em> on their smartphones than on a desktop or laptop computer. <sup><a href="#fn2" id="note2">[2]</a></sup> This same study noted that the most common complaint "encountered accessing websites or applications on your mobile phone" was slow load speeds.</p>
 
 <!-- TODO: references -->
 
@@ -61,7 +61,7 @@
   <li>Number of requests</li>
   <li>Number of requests grade</li>
   <li>Compression grade</li>
-  <li>JavaScript at the bottom grade <sup><a href="#fn1" id="note1">[1]</a></sup></li>
+  <li>JavaScript at the bottom grade <sup><a href="#fn5" id="note5">[5]</a></sup></li>
   <li></li>
 </ul>
 
@@ -82,7 +82,7 @@
     <li>The subset of YSlow's many metrics is fairly arbitrary, they tend to be things that I personally think are important & easy to understand/improve.
     <li>The "JS Bottom Grade" proved to be flawed as it returned 100% for every single URL tested. I can manually observe that no every site puts their JavaScript at the bottom, so this must be a YSlow bug.
     </ul>
-  <li>Responsive design problematizes this study's whole premise. Responsive sites aren't likely to be listed on the Library Success wiki. If a similar sample of self-identified responsive sites of libraries could be obtained, it would be interesting to compare their performance against both library mobile sites and popular sites like the Alexa top 10.</li>
+  <li>Responsive design problematizes this study's whole premise. Responsive sites aren't likely to be listed on the Library Success wiki. If a similar sample of self-identified responsive sites of libraries could be obtained, it would be interesting to compare their performance against both library mobile sites and popular sites like the Alexa top 10.
 </ul>
 
 <h3>
@@ -96,7 +96,12 @@
 </h3>
 
 <ol>
-  <li><a href="#note1" id="fn1">^</a> This was later discarded because all tests returned 100%, even sites which clearly did not place all their JavaScript at the bottom when manually inspected.</li>
+  <li>
+    <a href="#note1" id="fn1">^</a> Podjarny, Guy. (2011, July 12). "Understanding Mobile Cache Size." <a href="http://www.guypo.com/mobile/understanding-mobile-cache-sizes/">http://www.guypo.com/mobile/understanding-mobile-cache-sizes/</a>; Souders, Steve. (2010, July 12). "Mobile cache file sizes." <a href="http://www.stevesouders.com/blog/2010/07/12/mobile-cache-file-sizes/">http://www.stevesouders.com/blog/2010/07/12/mobile-cache-file-sizes/</a>;
+  <li>
+    <a href="note2" id="fn2">^</a> Equat!on Research, Compuware. (2011, July). "What Mobile Users Want."
+  <li>
+    <a href="#note5" id="fn5">^</a> This was later discarded because all tests returned 100%, even sites which clearly did not place all their JavaScript at the bottom when manually inspected.
 </ol>
 
 <p>If I referenced anything, it'll go here.</p>
