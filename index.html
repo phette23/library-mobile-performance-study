@@ -40,16 +40,16 @@
 
 <p>To obtain a large sample of library mobile websites, I scraped URLs from <a href="http://www.libsuccess.org/index.php?title=M-Libraries">the M-Libraries page</a> of the Library Success wiki. The script which harvests URLs <a href="https://github.com/phette23/library-mobile-performance-study/blob/master/parse-m-libraries.js">is included in the git repository</a>. It takes the hrefs of all anchors elements in the <q>Mobile interfaces (and/or <abbr title="Online Public Access Catalog">OPACS</abbr>)</q> section, which includes several links to screenshots and other miscellany that I manually removed.</p>
 
-<p>To compare library sites against a common metric that most people would be familiar with, I chose to look up the top ten most-visited websites in the United States <a href="http://www.alexa.com/topsites/countries/US">using Alexa</a>. There are certainly only services which claim to know the top websites, and taking a global view would have resulting in a different set, too.</p>
+<p>To compare library sites against a common metric that most people would be familiar with, I chose to look up the top ten most-visited websites in the United States <a href="http://www.alexa.com/topsites/countries/US">using Alexa</a>. There are certainly other services which claim to know the top websites, and taking a global view would have resulted in a different set, too.</p>
 
-<p>Alexa doesn't list the top sites specifically for mobile devices, so to determine which of the top ten sites have separate mobile sites I spoofed an iPhone using <code>curl</code> by running the following:</p>
+<p>Alexa doesn't list the top sites specifically for mobile devices, so to determine which of the top ten sites have separate mobile sites I spoofed an iPhone using <code><a href="http://curl.haxx.se/" title="cURL home page">curl</a></code> by running the following:</p>
 
 <pre><code>curl -LIA "Mozilla/5.0 (iPhone; CPU iPhone OS 6_0_1 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A523 Safari/8536.25" $URL
 </code></pre>
 
 <p>where <code>$URL</code> is the desktop URL listed in Alexa. For the top ten sites, half used the same URL while half redirected to a mobile-specific location, e.g. m.facebook.com.</p>
 
-<p>Already, this introduces slight inaccuracies in a performance analysis because how a user ends up on a mobile page already affects their experience. While the way my tests are run assume users start on their destination URL, that's not necessarily true. At their worst, some of the Alexa sites perform multiple redirects before landing on the mobile URL. Library sites, too, might require redirect before users get the experience optimized for their device. On the whole, while redirects should only account for a couple HTTP requests at most (and ideally only the first time a user accesses your site on a device), they're still to be avoided and can cause a noticeable page load delay. [ref: Souders first book]</p>
+<p>Already, this introduces slight inaccuracies in a performance analysis because how a user ends up on a mobile page affects their experience. While the way my tests are run assumes users start on their destination URL, that's not necessarily true. At their worst, some of the Alexa sites perform multiple redirects before landing on the mobile URL. Library sites, too, might require a redirect before users get the experience optimized for their device. On the whole, while redirects should only account for a couple HTTP requests at most (and ideally only the first time a user accesses your site on a device), they're still to be avoided and can cause a noticeable page load delay. [ref: Souders first book]</p>
 
 <p>Once I had a list of both mobile library websites and mobile versions of the Alexa top ten, I ran heuristic performance tests using Yahoo!'s YSlow. To run the tests programmatically on hundreds of URLs, I used <a href="http://phantomjs.org/">PhantomJS</a> which runs a headless WebKit browser. To work around any user-agent sniffing sites were doing (e.g. redirecting desktop browsers to a desktop site), I set PhantomJS's user agent string to an iPhone 6. Since tests are heuristic and essentially check to see if a site meets a particular guideline, it doesn't matter that they're run in WebKit as opposed to another rendering engine whose real performance may differ.</p>
 
@@ -62,7 +62,7 @@
   <li>JavaScript at the bottom grade <sup><a href="#fn3" id="note3">[3]</a></sup></li>
 </ul>
 
-Five of the M-Libraries sites timed out & didn't produce any data. Five out of 135 total sites isn't a bad number.
+<p>Five of the M-Libraries sites timed out & didn't produce any data. Five out of 135 total sites isn't a bad number.</p>
 
 <!-- TODO: fill in statistical analysis -->
 
@@ -71,7 +71,7 @@ Five of the M-Libraries sites timed out & didn't produce any data. Five out of 1
 </h3>
 
 <ul>
-  <li>The list of library mobile sites is not comprehensive & probably very self-selecting, as only libraries aware of the Library Success wiki would bother listing their site there.
+  <li>The list of library mobile sites is not comprehensive & self-selecting, as only libraries aware of the Library Success wiki would bother listing their site there.
   <li>Furthermore, there's no guarantee that sites listed are current; URLs may have changed or the institution's may have changed strategies, using a single responsive design for instance.
   <li>Since only the URLs listed in the wiki were tested, this doesn't perform a comprehensive test of any institution's mobile presence. While some places listed a couple URLs, often a home page and a catalog, my method doesn't crawl an entire site while testing each page.
   <li>YSlow
@@ -87,28 +87,32 @@ Five of the M-Libraries sites timed out & didn't produce any data. Five out of 1
 <a name="results" class="anchor" href="#results"></a>Results
 </h3>
 
-<p>Results, complete with graphs.</p>
-
-<p>Overall, it was evident that library sites that perform well are competitive with the Alexa top ten. The third quartiles of the overall YSlow grades for each set of sites were comparable (93.75 for the Alexa top ten while 92 for library sites). However, as sites in each data set perform worse, the drop-off is much more significant for libraries. The bottom quartiles of overall YSlow grades were much further apart (a respectable 83 for the Alexa sites, while libraries had a 62).</p>
+<p>Overall, it was evident the best-performing library sites were competitive with the best-performing Alexa sites. The third quartiles of the overall YSlow grades for each set of sites were comparable (93.75 for the Alexa top ten versus 92 for libraries). However, as sites in each data set perform worse, the drop-off was much more significant for libraries. The bottom quartiles of overall YSlow grades were much further apart (a respectable 83 for the Alexa sites versus 62 for libraries).</p>
 
 <!-- TODO: generate with D3, wrap image in noscript tag -->
-<img src="https://docs.google.com/spreadsheet/oimg?key=0AlVSWa90m8umdHQyaTlfa1ZOZ3hxdFRtandIT2J3RWc&oid=1&zx=fjfwyyg0nz53" alt="Graph of the number of overall YSlow grades of the Alexa top ten versus mobile library sites" />
+<p>
+  <img src="https://docs.google.com/spreadsheet/oimg?key=0AlVSWa90m8umdHQyaTlfa1ZOZ3hxdFRtandIT2J3RWc&oid=1&zx=fjfwyyg0nz53" alt="Graph of the number of overall YSlow grades of the Alexa top ten versus mobile library sites" />
+</p>
 
-Interestingly, library websites actually fared <em>better</em> than the Alexa top ten in terms of using a limited number of HTTP requests. The median for mobile library sites (13.5) was a full three requests fewer than for the Alexa top ten.
+<p>Interestingly, library websites actually fared <em>better</em> than the Alexa top ten in terms of using a limited number of HTTP requests. The median for mobile library sites (13.5) was a full three requests fewer than for the Alexa top ten.</p>
 
-<img src="https://docs.google.com/spreadsheet/oimg?key=0AlVSWa90m8umdHQyaTlfa1ZOZ3hxdFRtandIT2J3RWc&oid=2&zx=l4a93hrc9mnu" alt="Graph of the number of HTTP requests of the Alexa top ten versus mobile library sites" />
+<p>
+  <img src="https://docs.google.com/spreadsheet/oimg?key=0AlVSWa90m8umdHQyaTlfa1ZOZ3hxdFRtandIT2J3RWc&oid=2&zx=l4a93hrc9mnu" alt="Graph of the number of HTTP requests of the Alexa top ten versus mobile library sites" />
+</p>
 
-This is reflected in better performance on the YSlow requests grade as well. In fact, <em>the median score for library sites was a perfect one hundred percent</em>. The Alexa top ten median was 90.5%.
+<p>This was reflected in better performance on the YSlow requests grade as well. In fact, <em>the median score for library sites was a perfect one hundred percent</em>. The Alexa top ten median was 90.5%.</p>
 
-Other than a handful of outliers, the worst of which used an unfathomable <em>ninety-one requests</em> to serve a mobile site, most library sites are very responsible about limiting the number of resources they're serving to devices. However, there were so many outlier sites serving up dozens of requests that the average number of requests for a library site turned out to be greater than the Alexa top ten average (18.05 versus 17.4).
+<p>Other than a handful of outliers, the worst of which used an unfathomable <em>ninety-one requests</em> to serve a mobile site, most library sites were very responsible about limiting the number of resources they're serving to devices. However, there were so many outlier sites serving up dozens of requests that the average number of requests for a library site turned out to be greater than the Alexa top ten average (18.05 versus 17.4).</p>
 
-While it's (perhaps) an obvious counterpoint, I don't think it's fair to say that the Alexa top ten use more requests because they're more sophisticated sites serving a greater number of user tasks. Library sites fulfill a number of functions, most notably search and retrieval which puts them in the same category as Google and Yahoo! from the Alexa list, while many of the Alexa sites (Facebook, Twitter) were judged based upon only a simplistic login page rather than their full-feature web applications which certainly use more requests.
+<p>While it's (perhaps) an obvious counterpoint, it's not fair to say that the Alexa top ten use more requests because they're more sophisticated sites serving a greater number of user tasks. Library sites fulfill a number of functions, most notably search and retrieval which puts them in the same category as Google and Yahoo! from the Alexa list, while many of the Alexa sites (Facebook, Twitter) were judged by a simplistic login page rather than their full-feature web applications that use more requests.</p>
 
-Where did library sites fall behind? The GZIP grade showed a distinct advantage to the Alexa top ten.
+<p>Where did library sites fall behind? The GZIP grade showed a distinct advantage to the Alexa top ten.</p>
 
-<img src="https://docs.google.com/spreadsheet/oimg?key=0AlVSWa90m8umdHQyaTlfa1ZOZ3hxdFRtandIT2J3RWc&oid=3&zx=nvwa8qp35k8e" alt="Graph of the YSlow GZIP grades of the Alexa top ten versus mobile library sites" />
+<p>
+  <img src="https://docs.google.com/spreadsheet/oimg?key=0AlVSWa90m8umdHQyaTlfa1ZOZ3hxdFRtandIT2J3RWc&oid=3&zx=nvwa8qp35k8e" alt="Graph of the YSlow GZIP grades of the Alexa top ten versus mobile library sites" />
+</p>
 
-While the Alexa sites ensure that most of their text resources are compressed, libraries do not do as good a job (median 100% for Alexa versus a paltry 78% for libraries). This is disappointing because GZIP is one of the easiest performance optimizations to apply; it typically involves adding a small stanza of text to a server configuration file. Once configured, the server never needs to be revisited or maintained.
+<p>While the Alexa sites ensured that most of their text resources were compressed, libraries did not do as good a job (median 100% for Alexa versus a paltry 78% for libraries). This poor result was disappointing because GZIP is one of the easiest performance optimizations to apply; it typically involves adding a small stanza of text to a server configuration file. Once configured, the server never needs to be revisited or maintained.</p>
 
 <h3>
 <a name="references" class="anchor" href="#references"></a>References
