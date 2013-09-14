@@ -126,6 +126,10 @@
 
 <p>While the Alexa sites ensured that most of their text resources were compressed, libraries did not do as good a job (median 100% for Alexa versus a paltry 78% for libraries). This poor result was disappointing because GZIP is one of the easiest performance optimizations to apply; it typically involves adding a small stanza of text to a server configuration file. Once configured, the server never needs to be revisited or maintained.</p>
 
+<h4>Conclusion</h4>
+
+<p>Mobile library sites scraped from the Library Success wiki performed decent in terms of the performance metrics used in this analysis. They were competitive in terms of overall YSlow grade and actually outperformed the Alexa top ten in terms of minimizing HTTP requests. However, the number of libraries using GZIP compression to deliver fewer bytes through the network was disappointing. Libraries should research whether their mobile sites are serving compressed assets and alter their server configuration if they are not.</p>
+
 <h3>
 <a name="references" class="anchor" href="#references"></a>References
 </h3>
