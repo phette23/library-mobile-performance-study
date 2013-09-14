@@ -49,7 +49,7 @@
 
 <p>where <code>$URL</code> is the desktop URL listed in Alexa. For the top ten sites, half used the same URL while half redirected to a mobile-specific location, e.g. m.facebook.com.</p>
 
-<p>Already, this introduces slight inaccuracies in a performance analysis because how a user ends up on a mobile page affects their experience. While the way my tests are run assumes users start on their destination URL, that's not necessarily true. At their worst, some of the Alexa sites perform multiple redirects before landing on the mobile URL. Library sites, too, might require a redirect before users get the experience optimized for their device. On the whole, while redirects should only account for a couple HTTP requests at most (and ideally only the first time a user accesses your site on a device), they're still to be avoided and can cause a noticeable page load delay. [ref: Souders first book]</p>
+<p>Already, this introduces slight inaccuracies in a performance analysis because how a user ends up on a mobile page affects their experience. While the way my tests are run assumes users start on their destination URL, that's not necessarily true. At their worst, some of the Alexa sites perform multiple redirects before landing on the mobile URL. Library sites, too, might require a redirect before users get the experience optimized for their device. On the whole, while redirects should only account for a couple HTTP requests at most (and ideally only the first time a user accesses your site on a device), they're still to be avoided and can cause a noticeable page load delay. <sup><a href="#fn3" id="note3">[3]</a></sup></p>
 
 <p>Once I had a list of both mobile library websites and mobile versions of the Alexa top ten, I ran heuristic performance tests using Yahoo!'s YSlow. To run the tests programmatically on hundreds of URLs, I used <a href="http://phantomjs.org/">PhantomJS</a> which runs a headless WebKit browser. To work around any user-agent sniffing sites were doing (e.g. redirecting desktop browsers to a desktop site), I set PhantomJS's user agent string to an iPhone 6. Since tests are heuristic and essentially check to see if a site meets a particular guideline, it doesn't matter that they're run in WebKit as opposed to another rendering engine whose real performance may differ.</p>
 
@@ -59,7 +59,7 @@
   <li>Number of requests</li>
   <li>Number of requests grade</li>
   <li>Compression grade</li>
-  <li>JavaScript at the bottom grade <sup><a href="#fn3" id="note3">[3]</a></sup></li>
+  <li>JavaScript at the bottom grade <sup><a href="#fn4" id="note4">[4]</a></sup></li>
 </ul>
 
 <p>Five of the M-Libraries sites timed out & didn't produce any data. Five out of 135 total sites isn't a bad number.</p>
@@ -124,7 +124,9 @@
   <li>
     <a href="#note2" id="fn2">^</a> Equat!on Research, Compuware. (2011, July). "What Mobile Users Want."
   <li>
-    <a href="#note3" id="fn3">^</a> This was later discarded because all tests returned 100%, even sites which clearly did not place all their JavaScript at the bottom when manually inspected.
+    <a href="#note3" id="fn3">^</a> Souders, Steve. (2008) "Rule 11: Avoid Redirects" in <cite>High Performance Web Sites: Essential Knowledge for Front-End Engineers</cite>. O'Reilly.
+  <li>
+    <a href="#note4" id="fn4">^</a> This was later discarded because all tests returned 100%, even sites which clearly did not place all their JavaScript at the bottom when manually inspected.
 </ol>
 
       </section>
