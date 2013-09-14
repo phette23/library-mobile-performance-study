@@ -184,6 +184,13 @@ footer {
   bottom:50px;
 }
 
+/* sub-lists don't need extra space below */
+li ul {
+  margin-bottom: 0;
+}
+
+/* media queries */
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
