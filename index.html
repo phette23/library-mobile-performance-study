@@ -102,7 +102,13 @@ This is reflected in better performance on the YSlow requests grade as well. In 
 
 Other than a handful of outliers, the worst of which used an unfathomable <em>ninety-one requests</em> to serve a mobile site, most library sites are very responsible about limiting the number of resources they're serving to devices. However, there were so many outlier sites serving up dozens of requests that the average number of requests for a library site turned out to be greater than the Alexa top ten average (18.05 versus 17.4).
 
-While it's (perhaps) an obvious conclusion, I don't think it's fair to say that the Alexa top ten use more requests because they're more sophisticated and serving a greater number of user tasks. Library sites fulfill a number of functions, most notably search and retrieval which puts them in the same category as Google and Yahoo! from the Alexa list, while many of the Alexa sites (Facebook, Twitter) were judged based upon only a simplistic login page rather than their full-feature web applications which certainly use more requests.
+While it's (perhaps) an obvious counterpoint, I don't think it's fair to say that the Alexa top ten use more requests because they're more sophisticated sites serving a greater number of user tasks. Library sites fulfill a number of functions, most notably search and retrieval which puts them in the same category as Google and Yahoo! from the Alexa list, while many of the Alexa sites (Facebook, Twitter) were judged based upon only a simplistic login page rather than their full-feature web applications which certainly use more requests.
+
+Where did library sites fall behind? The GZIP grade showed a distinct advantage to the Alexa top ten.
+
+<img src="https://docs.google.com/spreadsheet/oimg?key=0AlVSWa90m8umdHQyaTlfa1ZOZ3hxdFRtandIT2J3RWc&oid=3&zx=nvwa8qp35k8e" alt="Graph of the YSlow GZIP grades of the Alexa top ten versus mobile library sites" />
+
+While the Alexa sites ensure that most of their text resources are compressed, libraries do not do as good a job (median 100% for Alexa versus a paltry 78% for libraries). This is disappointing because GZIP is one of the easiest performance optimizations to apply; it typically involves adding a small stanza of text to a server configuration file. Once configured, the server never needs to be revisited or maintained.
 
 <h3>
 <a name="references" class="anchor" href="#references"></a>References
