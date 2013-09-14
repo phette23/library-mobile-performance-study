@@ -128,7 +128,7 @@
 
 <h4>Conclusion</h4>
 
-<p>Mobile library sites scraped from the Library Success wiki performed decent in terms of the performance metrics used in this analysis. They were competitive in terms of overall YSlow grade and actually outperformed the Alexa top ten in terms of minimizing HTTP requests. However, the number of libraries using GZIP compression to deliver fewer bytes through the network was disappointing. Libraries should research whether their mobile sites are serving compressed assets and alter their server configuration if they are not.</p>
+<p>Mobile library sites scraped from the Library Success wiki performed decent in terms of the performance metrics used in this analysis. They were competitive in terms of overall YSlow grade and actually outperformed the Alexa top ten in terms of minimizing HTTP requests. However, the number of libraries using GZIP compression to deliver fewer bytes through the network was disappointing. Libraries should research whether their mobile sites are serving compressed assets and alter their server configuration if they are not. <sup><a href="#fn5" id="note5">[5]</a></sup></p>
 
 <h3>
 <a name="references" class="anchor" href="#references"></a>References
@@ -143,6 +143,8 @@
     <a href="#note3" id="fn3">^</a> Souders, Steve. (2008) "Rule 11: Avoid Redirects" in <cite>High Performance Web Sites: Essential Knowledge for Front-End Engineers</cite>. O'Reilly.
   <li>
     <a href="#note4" id="fn4">^</a> This was later discarded because all tests returned 100%, even sites which clearly did not place all their JavaScript at the bottom when manually inspected.
+  <li>
+    <a href="#note5" id="fn5">^</a> Two good starting points: <a href="http://gzipwtf.com/" title="the easiest way to check GZIP & more">gzipWTF</a> provides an easy means of testing your site for compression while <a href="https://github.com/h5bp/server-configs" title="server-configs | h5bp on GitHub">the Server Configs project</a>—from the people behind the HTML5 Boilerplate—has a nice set of server configuration files which include stanzas that activate HTTP compression.
 </ol>
 
       </section>
