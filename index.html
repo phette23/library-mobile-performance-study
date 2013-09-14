@@ -51,7 +51,7 @@
 
 <p>Already, this introduces slight inaccuracies in a performance analysis because how a user ends up on a mobile page already affects their experience. While the way my tests are run assume users start on their destination URL, that's not necessarily true. At their worst, some of the Alexa sites perform multiple redirects before landing on the mobile URL. Library sites, too, might require redirect before users get the experience optimized for their device. On the whole, while redirects should only account for a couple HTTP requests at most (and ideally only the first time a user accesses your site on a device), they're still to be avoided and can cause a noticeable page load delay. [ref: Souders first book]</p>
 
-<p>Once I had a list of both mobile library websites and mobile versions of the Alexa top 10, I ran heuristic performance tests using Yahoo!'s YSlow. To run the tests programmatically on hundreds of URLs, I used <a href="http://phantomjs.org/">PhantomJS</a> which runs a headless WebKit browser. To work around any user-agent sniffing sites were doing (e.g. redirecting desktop browsers to a desktop site), I set PhantomJS's user agent string to an iPhone 6. Since tests are heuristic and essentially check to see if a site meets a particular guideline, it doesn't matter that they're run in WebKit as opposed to another rendering engine whose real performance may differ.</p>
+<p>Once I had a list of both mobile library websites and mobile versions of the Alexa top ten, I ran heuristic performance tests using Yahoo!'s YSlow. To run the tests programmatically on hundreds of URLs, I used <a href="http://phantomjs.org/">PhantomJS</a> which runs a headless WebKit browser. To work around any user-agent sniffing sites were doing (e.g. redirecting desktop browsers to a desktop site), I set PhantomJS's user agent string to an iPhone 6. Since tests are heuristic and essentially check to see if a site meets a particular guideline, it doesn't matter that they're run in WebKit as opposed to another rendering engine whose real performance may differ.</p>
 
 <p>The specific YSlow tests recorded were:</p>
 <ul>
@@ -80,7 +80,7 @@ Five of the M-Libraries sites timed out & didn't produce any data. Five out of 1
     <li>does measure a number of important aspects which generally correlate with improved performance.
     <li>The subset of YSlow's many metrics is fairly arbitrary, they tend to be things that I personally think are important & easy to understand/improve.
     </ul>
-  <li>Responsive design problematizes this study's whole premise. Responsive sites aren't likely to be listed on the Library Success wiki. If a similar sample of self-identified responsive sites of libraries could be obtained, it would be interesting to compare their performance against both library mobile sites and popular sites like the Alexa top 10.
+  <li>Responsive design problematizes this study's whole premise. Responsive sites aren't likely to be listed on the Library Success wiki. If a similar sample of self-identified responsive sites of libraries could be obtained, it would be interesting to compare their performance against both library mobile sites and popular sites like the Alexa top ten.
 </ul>
 
 <h3>
@@ -89,10 +89,20 @@ Five of the M-Libraries sites timed out & didn't produce any data. Five out of 1
 
 <p>Results, complete with graphs.</p>
 
-<p>Overall, it was evident that library sites that perform well are competitive with the Alexa top 10. The third quartiles of the overall YSlow grades for each set of sites were comparable (93.75 for the Alexa top 10 while 92 for library sites). However, as sites in each data set perform worse, the drop-off is much more significant for libraries. The bottom quartiles of overall YSlow grades were much further apart (a respectable 83 for the Alexa sites, while libraries had a 62).</p>
+<p>Overall, it was evident that library sites that perform well are competitive with the Alexa top ten. The third quartiles of the overall YSlow grades for each set of sites were comparable (93.75 for the Alexa top ten while 92 for library sites). However, as sites in each data set perform worse, the drop-off is much more significant for libraries. The bottom quartiles of overall YSlow grades were much further apart (a respectable 83 for the Alexa sites, while libraries had a 62).</p>
 
 <!-- TODO: generate with D3, wrap image in noscript tag -->
-<img src="https://docs.google.com/spreadsheet/oimg?key=0AlVSWa90m8umdHQyaTlfa1ZOZ3hxdFRtandIT2J3RWc&oid=1&zx=fjfwyyg0nz53" alt="Graph of the minimum, maximum, & quartiles of both the Alexa top 10 & the M-Libraries sites" />
+<img src="https://docs.google.com/spreadsheet/oimg?key=0AlVSWa90m8umdHQyaTlfa1ZOZ3hxdFRtandIT2J3RWc&oid=1&zx=fjfwyyg0nz53" alt="Graph of the number of overall YSlow grades of the Alexa top ten versus mobile library sites" />
+
+Interestingly, library websites actually fared <em>better</em> than the Alexa top ten in terms of using a limited number of HTTP requests. The median for mobile library sites (13.5) was a full three requests fewer than for the Alexa top ten.
+
+<img src="https://docs.google.com/spreadsheet/oimg?key=0AlVSWa90m8umdHQyaTlfa1ZOZ3hxdFRtandIT2J3RWc&oid=2&zx=l4a93hrc9mnu" alt="Graph of the number of HTTP requests of the Alexa top ten versus mobile library sites" />
+
+This is reflected in better performance on the YSlow requests grade as well. In fact, <em>the median score for library sites was a perfect one hundred percent</em>. The Alexa top ten median was 90.5%.
+
+Other than a handful of outliers, the worst of which used an unfathomable <em>ninety-one requests</em> to serve a mobile site, most library sites are very responsible about limiting the number of resources they're serving to devices. However, there were so many outlier sites serving up dozens of requests that the average number of requests for a library site turned out to be greater than the Alexa top ten average (18.05 versus 17.4).
+
+While it's (perhaps) an obvious conclusion, I don't think it's fair to say that the Alexa top ten use more requests because they're more sophisticated and serving a greater number of user tasks. Library sites fulfill a number of functions, most notably search and retrieval which puts them in the same category as Google and Yahoo! from the Alexa list, while many of the Alexa sites (Facebook, Twitter) were judged based upon only a simplistic login page rather than their full-feature web applications which certainly use more requests.
 
 <h3>
 <a name="references" class="anchor" href="#references"></a>References
