@@ -23,7 +23,7 @@
         <ul>
           <li><a href="https://github.com/phette23/library-mobile-performance-study/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/phette23/library-mobile-performance-study/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/phette23/library-mobile-performance-study">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/phette23/library-mobile-performance-study">View On GitHub</a></li>
         </ul>
       </header>
 
@@ -78,8 +78,6 @@
 
 <p>Five of the M-Libraries sites timed out & didn't produce any data. Five out of 135 total sites isn't a bad number.</p>
 
-<!-- TODO: fill in statistical analysis -->
-
 <h3>
 <a name="limitations" class="anchor" href="#limitations"></a>Limitations
 </h3>
@@ -130,9 +128,13 @@
 
 <p>While the Alexa sites ensured that most of their text resources were compressed, libraries did not do as good a job (median 100% for Alexa versus a paltry 78% for libraries). This poor result was disappointing because GZIP is one of the easiest performance optimizations to apply; it typically involves adding a small stanza of text to a server configuration file. Once configured, the server never needs to be revisited or maintained.</p>
 
+<p>Finally, I tried to run some tests of statistical significance on the two sample populations. A Mann-Whitney U test (results <a href="https://docs.google.com/spreadsheet/ccc?key=0AlVSWa90m8umdHQyaTlfa1ZOZ3hxdFRtandIT2J3RWc&usp=sharing#gid=3">on a worksheet</a> in the data set) of the two sample population's overall YSlow grades seems to indicate that they are significantly different.<sup><a href="#fn5" id="note5">[5]</a></sup> However, it's worth noting that the sample sizes are so drastically different (130 to 10) that the Mann-Whitney U test may not be appropriate, tending to show that the populations differ.<sup><a href="#fn6" id="note6">[6]</a></sup> Looking at the mean ranks of the two populations, the Alexa sites' 95.3 is far better than the 68.6 of M-Libraries.<sup><a href="#fn7" id="note7">[7]</a></sup> A Kolmogorov-Smirnov test also tends to indicate that the two sample populations are dissimilar, with a P value of 0.039.<sup><a href="#fn8" id="note8">[8]</a></sup> </p>
+
+<p>It's flawed to compare such disparate sample sizes. If a second study was to be run, scraping a comparable number of links from the Alexa top websites would be logical.</p>
+
 <h4>Conclusion</h4>
 
-<p>Mobile library sites scraped from the Library Success wiki performed decent in terms of the performance metrics used in this analysis. They were competitive in terms of overall YSlow grade and actually outperformed the Alexa top ten in terms of minimizing HTTP requests. However, the number of libraries using GZIP compression to deliver fewer bytes through the network was disappointing. Libraries should research whether their mobile sites are serving compressed assets and alter their server configuration if they are not. <sup><a href="#fn5" id="note5">[5]</a></sup></p>
+<p>Mobile library sites scraped from the Library Success wiki performed decent in terms of the performance metrics used in this analysis. They were competitive in terms of overall YSlow grade and actually outperformed the Alexa top ten in terms of minimizing HTTP requests. However, the differences between the two sample populations are likely statistically significant. The number of libraries using GZIP compression to deliver fewer bytes to users was also disappointing. Libraries should research whether their mobile sites are serving compressed assets and alter their server configuration if they are not. <sup><a href="#fn9" id="note9">[9]</a></sup></p>
 
 <h3>
 <a name="notes" class="anchor" href="#notes"></a>Notes
@@ -148,7 +150,15 @@
   <li>
     <a href="#note4" id="fn4">^</a> This was later discarded because all tests returned 100%, even sites which clearly did not place all their JavaScript at the bottom when manually inspected.
   <li>
-    <a href="#note5" id="fn5">^</a> Two good starting points: <a href="http://gzipwtf.com/" title="the easiest way to check GZIP & more">gzipWTF</a> provides an easy means of testing your site for compression while <a href="https://github.com/h5bp/server-configs" title="server-configs | h5bp on GitHub">the Server Configs project</a>—from the people behind the HTML5 Boilerplate—has a nice set of server configuration files which include stanzas that activate HTTP compression.
+    <a href="#note5" id="fn5">^</a> I used <a href="http://vassarstats.net/utest.html"> VassarStats</a> to conduct the U test. The test is appropriate for an ordinal variable and non-normal populations with different sample sizes so it seemed appropriate.
+  <li>
+    <a href="#note6" id="fn6">^</a> Mann, H.B. & D.R. Whitney. (1947). "On a Test of Whether one of Two Random Variables is Stochastically Larger than the Other". <cite>The Annals of Mathematical Statistics</cite> volume 18, issue 1. <a href="http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.aoms/1177730491">http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.aoms/1177730491</a>. At least, that's my interpretation of their paper (see the tables of samples with increasingly divergent sample sizes).
+  <li>
+    <a href="#note7" id="fn7">^</a> Mean ranks are calculated by combining the two sample sets and ranking them, giving the lowest rank 1 and the highest rank (N<sub>1</sub> + N<sub>2</sub>) where N<sub>1</sub> and N<sub>2</sub> are the two sample sizes. Ties in rank are split accordingly, e.g. there were two sites with the lowest score so they are both given 1.5 rank. 70 is in the middle. Thus the Alexa sites in general outperformed in the combined population while the M-Libraries slightly underperformed. I used <a href="http://vassarstats.net/utest.html">VassarStats</a> to calculate mean ranks as well.
+  <li>
+    <a href="#note8" id="fn8">^</a> As above, a Kolmogorov-Smirnov test is good for non-normal, ordinal data with differing sample sizes so I thought it was appropriate here. I used <a href="http://www.physics.csbsju.edu/stats/KS-test.n.plot_form.html">this site</a> to perform the K-S test.
+  <li>
+    <a href="#note9" id="fn9">^</a> Two good starting points: <a href="http://gzipwtf.com/" title="the easiest way to check GZIP & more">gzipWTF</a> provides an easy means of testing your site for compression while <a href="https://github.com/h5bp/server-configs" title="server-configs | h5bp on GitHub">the Server Configs project</a>—from the people behind the HTML5 Boilerplate—has a nice set of server configuration files which include stanzas that activate HTTP compression.
 </ol>
 
       </section>
