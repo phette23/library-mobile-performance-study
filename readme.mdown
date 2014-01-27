@@ -47,3 +47,5 @@ All original code (e.g. the shell scripts, the JavaScript to scrape the Library 
 > This Mobile Library Website Study is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/ - See more at: http://opendatacommons.org/licenses/odbl/#sthash.Tk3QeWNR.dpuf
 
 Note that the software dependencies all come with their own licenses which are different from the above. See, for instance, the LICENSE.txt in the YSlow repository.
+
+![Analytics](https://ga-beacon.appspot.com/UA-29080462-2/library-mobile-performance-study/readme?pixel)
